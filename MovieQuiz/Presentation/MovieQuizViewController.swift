@@ -3,17 +3,12 @@ import UIKit
 final class MovieQuizViewController: UIViewController {
     
     @IBOutlet private var imageView: UIImageView!
-    
     @IBOutlet private var textLabel: UILabel!
-    
     @IBOutlet private var counterLabel: UILabel!
-    
     @IBOutlet private var yesButton: UIButton!
-    
     @IBOutlet private var noButton: UIButton!
     
     private var currentQuestionIndex = 0
-    
     private var correctAnswers = 0
     
     private let questions: [QuizQuestion] = [
@@ -59,6 +54,7 @@ final class MovieQuizViewController: UIViewController {
             correctAnswer: false)
     ]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -82,7 +78,7 @@ final class MovieQuizViewController: UIViewController {
         if isCorrect {
             correctAnswers += 1
         }
-
+        
         imageView.layer.masksToBounds = true
         imageView.layer.borderWidth = 8
         imageView.layer.borderColor = isCorrect ? UIColor.ypGreen.cgColor : UIColor.ypRed.cgColor
