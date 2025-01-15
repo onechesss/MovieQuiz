@@ -54,10 +54,25 @@ final class MovieQuizViewController: UIViewController {
             correctAnswer: false)
     ]
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private struct QuizQuestion {
+        let image: String
+        let text: String
+        let correctAnswer: Bool
     }
+    
+    private struct QuizStepViewModel {
+        let image: UIImage
+        let question: String
+        let questionNumber: String
+    }
+    
+    private struct QuizResultsViewModel {
+        let title: String
+        let text: String
+        let buttonText: String
+    }
+    
+    
     
     private func convert(model: QuizQuestion) -> QuizStepViewModel {
         let questionStep = QuizStepViewModel(
@@ -129,7 +144,7 @@ final class MovieQuizViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
-
+    
     @IBAction private func yesButtonClicked(_ sender: Any) {
         let currentQuestion = questions[currentQuestionIndex] // 1
         let givenAnswer = true
@@ -138,7 +153,7 @@ final class MovieQuizViewController: UIViewController {
         
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
     }
-
+    
     @IBAction private func noButtonClicked(_ sender: Any) {
         let currentQuestion = questions[currentQuestionIndex] // 1
         let givenAnswer = false
@@ -147,35 +162,4 @@ final class MovieQuizViewController: UIViewController {
         
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
     }
-}
-
-private struct QuizQuestion {
-    
-    let image: String
-    
-    let text: String
-    
-    let correctAnswer: Bool
-    
-}
-
-private struct QuizStepViewModel {
-    
-    let image: UIImage
-    
-    let question: String
-    
-    let questionNumber: String
-    
-}
-
-
-private struct QuizResultsViewModel {
-    
-    let title: String
-    
-    let text: String
-    
-    let buttonText: String
-    
 }
