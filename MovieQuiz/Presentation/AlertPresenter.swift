@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class AlertPresenter {
+final class AlertPresenter {
 
     func showAlert(ViewController: UIViewController, quiz result: AlertModel) {
         let alert = UIAlertController(
@@ -16,7 +16,7 @@ class AlertPresenter {
             message: result.message,
             preferredStyle: .alert)
         
-        let action = UIAlertAction(title: result.buttonText, style: .default, handler: { action in result.completion() })
+        let action = UIAlertAction(title: result.buttonText, style: .default, handler: { _ in result.completion() })
         
         alert.addAction(action)
         

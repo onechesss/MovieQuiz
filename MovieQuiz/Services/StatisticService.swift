@@ -11,12 +11,8 @@ final class StatisticService: StatisticServiceProtocol {
     private let storage: UserDefaults = .standard
 
     var gamesCount: Int {
-        get {
-            return storage.integer(forKey: "gamesCount")
-        }
-        set {
-            return storage.set(newValue, forKey: "gamesCount")
-        }
+        get { storage.integer(forKey: "gamesCount") }
+        set { storage.set(newValue, forKey: "gamesCount") }
     }
     
     var bestGame: GameResult {
@@ -24,6 +20,7 @@ final class StatisticService: StatisticServiceProtocol {
             let correct = storage.integer(forKey: "correct")
             let total = storage.integer(forKey: "total")
             let date = (storage.string(forKey: "date") ?? nil)
+            
             return GameResult(correct: correct, total: total, date: date ?? "")
         }
         set {
