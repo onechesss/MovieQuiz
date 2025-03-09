@@ -1,0 +1,18 @@
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/Models/AlertModel.swift":
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AlertModel.swiftconstvalues"
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AlertModel.d"
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AlertModel.swiftdeps"
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AlertModel.o"
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AlertModel.dia"
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/Helpers/Date+Extensions.swift":
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/Date+Extensions.d"
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/Date+Extensions.o"
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/Date+Extensions.swiftdeps"
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/Date+Extensions.dia"
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/Date+Extensions.swiftconstvalues"
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/Models/MostPopularMovies.swift":
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/MostPopularMovies.swiftdeps"
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/MostPopularMovies.dia"
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/MostPopularMovies.d"
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/MostPopularMovies.swiftconstvalues"
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/MostPopularMovies.o"

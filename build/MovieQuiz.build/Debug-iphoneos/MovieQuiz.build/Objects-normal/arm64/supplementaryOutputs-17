@@ -1,0 +1,18 @@
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/Models/QuizResultsViewModel.swift":
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuizResultsViewModel.d"
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuizResultsViewModel.swiftdeps"
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuizResultsViewModel.o"
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuizResultsViewModel.swiftconstvalues"
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuizResultsViewModel.dia"
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/Services/StatisticServiceProtocol.swift":
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/StatisticServiceProtocol.swiftconstvalues"
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/StatisticServiceProtocol.swiftdeps"
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/StatisticServiceProtocol.d"
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/StatisticServiceProtocol.dia"
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/StatisticServiceProtocol.o"
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/Services/NetworkClient.swift":
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/NetworkClient.dia"
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/NetworkClient.swiftdeps"
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/NetworkClient.o"
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/NetworkClient.swiftconstvalues"
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/NetworkClient.d"
