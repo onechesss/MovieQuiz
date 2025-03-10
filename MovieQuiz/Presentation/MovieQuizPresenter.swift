@@ -9,8 +9,11 @@ import Foundation
 import UIKit
 
 final class MovieQuizPresenter {
+    
     var currentQuestionIndex = 0
     private let questionsAmount: Int = 10
+    var currentQuestion: QuizQuestion?
+    weak var viewController: MovieQuizViewController?
     
     func convert(model: QuizQuestion) -> QuizStepViewModel {
         let questionStep = QuizStepViewModel(
@@ -21,14 +24,31 @@ final class MovieQuizPresenter {
     }
     
     func isLastQuestion() -> Bool {
-            currentQuestionIndex == questionsAmount - 1
-        }
+        currentQuestionIndex == questionsAmount - 1
+    }
+    
+    func resetQuestionIndex() {
+        currentQuestionIndex = 0
+    }
+    
+    func switchToNextQuestion() {
+        currentQuestionIndex += 1
+    }
+    
+    func yesButtonClicked() {
         
-        func resetQuestionIndex() {
-            currentQuestionIndex = 0
-        }
+        guard let currentQuestion = currentQuestion else { return }
         
-        func switchToNextQuestion() {
-            currentQuestionIndex += 1
+        let givenAnswer = true
+        
+        viewController?.showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
+    }
+    
+    func noButtonClicked() {
+        guard let currentQuestion = currentQuestion else { return }
+            
+            let givenAnswer = false
+            
+            viewController?.showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
         }
 }
