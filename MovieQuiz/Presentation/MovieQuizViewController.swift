@@ -9,7 +9,6 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     @IBOutlet private var noButton: UIButton!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
-    private var correctAnswers = 0
     private var questionFactory: QuestionFactoryProtocol?
     private var alertPresenter = AlertPresenter()
     private let presenter = MovieQuizPresenter()
@@ -35,10 +34,12 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         let alertModel = AlertModel(title: result.title,
                                     message: result.text,
                                     buttonText: result.buttonText,
-                                    completion: { self.presenter.currentQuestionIndex = 0
-                                    self.correctAnswers = 0
-                                    self.questionFactory?.requestNextQuestion() })
+                                    completion: {
+                                        self.presenter.currentQuestionIndex = 0
+                                        self.presenter.correctAnswers = 0
+                                        self.questionFactory?.requestNextQuestion() })
         alertPresenter.showAlert(ViewController: self, quiz: alertModel)
+        //self.presenter.restartGame()
     }
     
     func didLoadDataFromServer() {
@@ -59,9 +60,8 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     }
     
     func showAnswerResult(isCorrect: Bool) {
-        if isCorrect {
-            correctAnswers += 1
-        }
+
+        presenter.didAnswer(isCorrectAnswer: isCorrect)
         
         imageView.layer.masksToBounds = true
         imageView.layer.borderWidth = 8
@@ -73,7 +73,6 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
             self.imageView.layer.borderWidth = 0
             self.yesButton.isEnabled = true
             self.noButton.isEnabled = true
-            self.presenter.correctAnswers = self.correctAnswers
             self.presenter.questionFactory = self.questionFactory
             self.presenter.showNextQuestionOrResults()
         }
@@ -95,7 +94,7 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
             guard let self = self else { return }
             
             self.presenter.currentQuestionIndex = 0
-            self.correctAnswers = 0
+            self.presenter.restartGame()
             
             self.questionFactory?.loadData()
         }
