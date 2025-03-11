@@ -16,7 +16,6 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
         super.viewDidLoad()
         
         presenter = MovieQuizPresenter(viewController: self)
-        showLoadingIndicator()
         activityIndicator.hidesWhenStopped = true
         presenter.viewController = self
     }
@@ -25,7 +24,6 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
         let alertModel = presenter.makeResultsMessage(result: result)
         
         alertPresenter.showAlert(ViewController: self, quiz: alertModel)
-        self.presenter.restartGame()
     }
     
     func show(quiz step: QuizStepViewModel) {

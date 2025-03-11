@@ -44,19 +44,11 @@ final class MovieQuizPresenter: QuestionFactoryDelegate
         return questionStep
     }
     
-    func isLastQuestion() -> Bool {
-        currentQuestionIndex == questionsAmount - 1
-    }
-    
     func restartGame() {
         currentQuestionIndex = 0
         correctAnswers = 0
         
         questionFactory?.requestNextQuestion()
-    }
-    
-    func switchToNextQuestion() {
-        currentQuestionIndex += 1
     }
     
     func yesButtonClicked() {
@@ -67,28 +59,13 @@ final class MovieQuizPresenter: QuestionFactoryDelegate
         didAnswer(isYes: false)
     }
     
-    func didAnswer(isCorrectAnswer: Bool) {
-        if (isCorrectAnswer) { correctAnswers += 1 }
-    }
-    
     func makeResultsMessage(result: QuizResultsViewModel) -> AlertModel {
         let alertModel = AlertModel(title: result.title,
                                     message: result.text,
                                     buttonText: result.buttonText,
-                                    completion: { self.restartGame() })
+                                    completion: { [weak self] in guard let self else { return }; self.restartGame() })
         
         return alertModel
-    }
-
-    func proceedWithAnswer(isCorrect: Bool)
-    {
-        didAnswer(isCorrectAnswer: isCorrect)
-        viewController?.highlightImageBorder(isCorrectAnswer: isCorrect)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-            guard let self = self else { return }
-            self.proceedToNextQuestionOrResults()
-        }
     }
     
     func didRecieveNextQuestion(question: QuizQuestion?) {
@@ -100,6 +77,29 @@ final class MovieQuizPresenter: QuestionFactoryDelegate
         let viewModel = convert(model: question)
         DispatchQueue.main.async { [weak self] in
             self?.viewController?.show(quiz: viewModel)
+        }
+    }
+    
+    private func switchToNextQuestion() {
+        currentQuestionIndex += 1
+    }
+    
+    private func isLastQuestion() -> Bool {
+        currentQuestionIndex == questionsAmount - 1
+    }
+    
+    private func didAnswer(isCorrectAnswer: Bool) {
+        if (isCorrectAnswer) { correctAnswers += 1 }
+    }
+    
+    private func proceedWithAnswer(isCorrect: Bool)
+    {
+        didAnswer(isCorrectAnswer: isCorrect)
+        viewController?.highlightImageBorder(isCorrectAnswer: isCorrect)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            guard let self = self else { return }
+            self.proceedToNextQuestionOrResults()
         }
     }
     
@@ -117,7 +117,7 @@ final class MovieQuizPresenter: QuestionFactoryDelegate
     {
         viewController?.stopHighlightImageBorder()
         
-        if self.isLastQuestion() {
+        if isLastQuestion() {
             statisticService.store(correct: correctAnswers, total: 1)
             
             let text = """
