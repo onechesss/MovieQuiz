@@ -5,19 +5,36 @@
 //  Created by oneche$$$ on 09.03.2025.
 //
 
-import Foundation
 import UIKit
 
-final class MovieQuizPresenter {
-    
-    var currentQuestionIndex = 0
+final class MovieQuizPresenter: QuestionFactoryDelegate
+{
+    private var currentQuestionIndex = 0
+    private var currentQuestion: QuizQuestion?
+    private var correctAnswers: Int = 0
     private let questionsAmount: Int = 10
-    private var statisticService: StatisticServiceProtocol = StatisticService()
-    var currentQuestion: QuizQuestion?
-    weak var viewController: MovieQuizViewController?
-    var correctAnswers: Int = 0
+    private let statisticService: StatisticServiceProtocol!
+    
     var questionFactory: QuestionFactoryProtocol?
-        
+    weak var viewController: MovieQuizViewControllerProtocol?
+    
+    init(viewController: MovieQuizViewControllerProtocol) {
+        self.viewController = viewController
+        statisticService = StatisticService()
+        questionFactory = QuestionFactory(moviesLoader: MoviesLoader(), delegate: self)
+        questionFactory?.loadData()
+        viewController.showLoadingIndicator()
+    }
+    
+    func didLoadDataFromServer() {
+        viewController?.hideLoadingIndicator()
+        questionFactory?.requestNextQuestion()
+    }
+    
+    func didFailToLoadData(with error: Error) {
+        let message = error.localizedDescription
+        viewController?.showNetworkError(message: message)
+    }
     
     func convert(model: QuizQuestion) -> QuizStepViewModel {
         let questionStep = QuizStepViewModel(
@@ -34,6 +51,8 @@ final class MovieQuizPresenter {
     func restartGame() {
         currentQuestionIndex = 0
         correctAnswers = 0
+        
+        questionFactory?.requestNextQuestion()
     }
     
     func switchToNextQuestion() {
@@ -41,22 +60,36 @@ final class MovieQuizPresenter {
     }
     
     func yesButtonClicked() {
-            didAnswer(isYes: true)
-        }
+        didAnswer(isYes: true)
+    }
+    
+    func noButtonClicked() {
+        didAnswer(isYes: false)
+    }
+    
+    func didAnswer(isCorrectAnswer: Bool) {
+        if (isCorrectAnswer) { correctAnswers += 1 }
+    }
+    
+    func makeResultsMessage(result: QuizResultsViewModel) -> AlertModel {
+        let alertModel = AlertModel(title: result.title,
+                                    message: result.text,
+                                    buttonText: result.buttonText,
+                                    completion: { self.restartGame() })
         
-        func noButtonClicked() {
-            didAnswer(isYes: false)
-        }
+        return alertModel
+    }
+
+    func proceedWithAnswer(isCorrect: Bool)
+    {
+        didAnswer(isCorrectAnswer: isCorrect)
+        viewController?.highlightImageBorder(isCorrectAnswer: isCorrect)
         
-        func didAnswer(isYes: Bool) {
-            guard let currentQuestion = currentQuestion else {
-                return
-            }
-            
-            let givenAnswer = isYes
-            
-            viewController?.showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            guard let self = self else { return }
+            self.proceedToNextQuestionOrResults()
         }
+    }
     
     func didRecieveNextQuestion(question: QuizQuestion?) {
         guard let question = question else {
@@ -70,7 +103,20 @@ final class MovieQuizPresenter {
         }
     }
     
-    func showNextQuestionOrResults() {
+    private func didAnswer(isYes: Bool) {
+        guard let currentQuestion = currentQuestion else {
+            return
+        }
+        
+        let givenAnswer = isYes
+        
+        proceedWithAnswer(isCorrect: givenAnswer == currentQuestion.correctAnswer)
+    }
+    
+    private func proceedToNextQuestionOrResults()
+    {
+        viewController?.stopHighlightImageBorder()
+        
         if self.isLastQuestion() {
             statisticService.store(correct: correctAnswers, total: 1)
             
@@ -92,8 +138,5 @@ final class MovieQuizPresenter {
             viewController?.showLoadingIndicator()
         }
     }
-    
-    func didAnswer(isCorrectAnswer: Bool) {
-        if (isCorrectAnswer) { correctAnswers += 1 }
-    }
 }
+
