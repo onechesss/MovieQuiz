@@ -1,0 +1,18 @@
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/Models/QuizQuestion.swift":
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuizQuestion.swiftdeps"
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuizQuestion.o"
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuizQuestion.d"
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuizQuestion.swiftconstvalues"
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuizQuestion.dia"
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/Presentation/MovieQuizViewController.swift":
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/MovieQuizViewController.swiftconstvalues"
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/MovieQuizViewController.swiftdeps"
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/MovieQuizViewController.dia"
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/MovieQuizViewController.d"
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/MovieQuizViewController.o"
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/Helpers/Array+Extensions.swift":
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/Array+Extensions.o"
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/Array+Extensions.swiftconstvalues"
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/Array+Extensions.swiftdeps"
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/Array+Extensions.dia"
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/Array+Extensions.d"

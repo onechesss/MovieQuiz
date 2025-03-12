@@ -1,0 +1,18 @@
+{
+  "" : {
+    "diagnostics" : "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests-master.dia",
+    "emit-module-dependencies" : "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests-master-emit-module.dia",
+    "swift-dependencies" : "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests-master.swiftdeps"
+  },
+  "/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuizUITests/MovieQuizUITests.swift" : {
+    "const-values" : "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests.swiftconstvalues",
+    "dependencies" : "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests.d",
+    "diagnostics" : "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests.dia",
+    "index-unit-output-path" : "/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests.o",
+    "llvm-bc" : "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests.bc",
+    "object" : "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests.o",
+    "swift-dependencies" : "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests.swiftdeps",
+    "swiftmodule" : "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuizUITests.build/Objects-normal/arm64/MovieQuizUITests~partial.swiftmodule"
+  }
+}

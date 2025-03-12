@@ -1,0 +1,18 @@
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/Presentation/AlertPresenter.swift":
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AlertPresenter.swiftconstvalues"
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AlertPresenter.swiftdeps"
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AlertPresenter.o"
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AlertPresenter.dia"
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AlertPresenter.d"
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/AppDelegate.swift":
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AppDelegate.d"
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AppDelegate.swiftconstvalues"
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AppDelegate.dia"
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AppDelegate.swiftdeps"
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/AppDelegate.o"
+"/Users/oneche/Desktop/projects/MovieQuiz-ios/MovieQuiz/Services/QuestionFactoryDelegate.swift":
+  dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuestionFactoryDelegate.d"
+  const-values: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuestionFactoryDelegate.swiftconstvalues"
+  object: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuestionFactoryDelegate.o"
+  swift-dependencies: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuestionFactoryDelegate.swiftdeps"
+  diagnostics: "/Users/oneche/Desktop/projects/MovieQuiz-ios/build/MovieQuiz.build/Debug-iphoneos/MovieQuiz.build/Objects-normal/arm64/QuestionFactoryDelegate.dia"
